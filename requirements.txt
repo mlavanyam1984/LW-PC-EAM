@@ -1,0 +1,31 @@
+# LW-PC-EAM Requirements
+# =======================
+
+# Core deep learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image processing
+Pillow>=9.0.0
+opencv-python>=4.7.0
+
+# Scientific computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Evaluation metrics
+scikit-learn>=1.2.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Configuration
+PyYAML>=6.0
+
+# Dataset download
+kaggle>=1.5.16
+
+# Optional: Edge deployment
+# onnxruntime>=1.15.0         # For ONNX inference
+# onnx>=1.14.0                # For ONNX export
+# tensorrt                    # Jetson-specific (install via JetPack)

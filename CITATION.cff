@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "LW-PC-EAM: Attention-Driven Explainable PatchCore for Real-Time Anomaly Detection on Resource-Constrained Edge Devices"
+abstract: >
+  LW-PC-EAM is a lightweight, edge-deployable industrial anomaly detection
+  framework combining a MobileNetV2 backbone, PatchCore memory bank with
+  greedy minimax coreset sampling, and a novel memory-conditioned attention
+  mechanism that produces interpretable heatmaps in a single forward pass
+  without post-hoc gradient computation.
+version: "1.0.0"
+date-released: "2025-01-01"
+license: MIT
+repository-code: "https://github.com/<your-username>/LW-PC-EAM"
+keywords:
+  - anomaly detection
+  - industrial visual inspection
+  - explainable AI
+  - edge deployment
+  - PatchCore
+  - attention mechanism
+  - MobileNetV2
+  - MVTec AD
+
+references:
+  - type: dataset
+    title: "MVTec Defect Detection Dataset"
+    authors:
+      - name: "MVTec Software GmbH"
+    year: 2019
+    url: "https://www.kaggle.com/datasets/avdvhh/mvtec-defect-detection-dataset"
+    notes: "The dataset is NOT included in this repository. Download separately."

@@ -1,0 +1,47 @@
+# LW-PC-EAM Configuration
+# ========================
+# Paper: Attention-Driven Explainable PatchCore for Real-Time Anomaly Detection
+
+model:
+  embedding_dim: 512          # MobileNetV2 projection output channels
+  num_attention_heads: 4      # Multi-head attention heads
+  qk_dim: 128                 # Query/Key projection dimensionality
+  coreset_ratio: 0.10         # Fraction of patches kept in memory bank (10%)
+  anomaly_threshold: 0.5      # Decision boundary for normal vs anomalous
+  gain: 5.0                   # Logistic sharpness for heatmap generation
+  image_size: 224             # Input resolution (MobileNetV2 standard)
+  pretrained: true            # Use ImageNet pretrained MobileNetV2 backbone
+
+training:
+  batch_size: 32              # Training batch size (paper Section 4.1)
+  optimizer: adam
+  learning_rate: 0.001        # Adam lr (paper Section 4.1)
+  weight_decay: 1.0e-5        # Adam weight decay
+  scheduler: steplr
+  scheduler_patience: 7       # StepLR patience
+  early_stopping: true
+  num_workers: 4
+
+evaluation:
+  latency_warmup_runs: 50     # Warm-up iterations before benchmarking
+  latency_timed_runs: 500     # Timed inference runs (paper Section 4.1)
+  confidence_intervals: true  # Report 95% CIs
+  cross_validation_folds: 5
+
+deployment:
+  quantization: int8          # INT8 post-training quantization (TensorRT / ONNX)
+  target_device: jetson_xavier_nx  # Primary edge deployment target
+  secondary_device: raspberry_pi4
+
+dataset:
+  name: mvtec_ad
+  url: https://www.kaggle.com/datasets/avdvhh/mvtec-defect-detection-dataset
+  n_categories: 15
+  train_split: train/good     # Only defect-free images for training
+  test_split: test            # Normal + anomalous for evaluation
+
+output:
+  save_model: true
+  save_heatmaps: true
+  save_metrics_json: true
+  visualization_samples: 5    # Number of heatmaps to save per category

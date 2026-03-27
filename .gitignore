@@ -1,0 +1,58 @@
+# ─── Dataset (never commit — too large, separate license) ────────────────────
+data/mvtec_ad/
+data/*.zip
+data/*.tar
+data/*.tar.gz
+*.zip
+
+# ─── Kaggle credentials (NEVER commit API keys) ───────────────────────────────
+.kaggle/
+kaggle.json
+*.json
+!results/metrics.json          # keep sample metrics but exclude secrets
+
+# ─── Model checkpoints (large binary files) ──────────────────────────────────
+outputs/
+!results/                      # keep pre-generated result figures
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.engine                       # TensorRT engines
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Virtual environments ────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env
+
+# ─── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── IDEs ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+runs/
