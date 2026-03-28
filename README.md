@@ -180,30 +180,6 @@ python scripts/ablation_study.py \
 
 ---
 
-## Evaluation Metrics
-
-All metrics from the paper are implemented in `src/metrics.py`:
-
-- **Detection:** AUROC, F1-Score, Precision, Recall, Detection Accuracy (Eq. 15)
-- **Explainability:** Localization Fidelity (LF), Attribution Stability (AS), Clarity Index (CI), Explainability Score (Eq. 14)
-- **Efficiency:** Inference Speed/FPS (Eq. 16), Reduced Latency (Eq. 17), Processing Time (Eq. 19)
-- **Quality:** Similarity Score (Eq. 18), Reconstruction Error (Eq. 20)
-- **Cost:** Operational Cost (Eq. 13, weights: β=0.45, γ=0.30, δ=0.25)
-
----
-
-## Edge Deployment
-
-The model targets two edge platforms:
-
-| Platform | Quantization | Latency | FPS |
-|----------|-------------|---------|-----|
-| NVIDIA Jetson Xavier NX | INT8 (TensorRT) | **15 ms** | **68** |
-| Raspberry Pi 4 | INT8 (ONNX Runtime) | ~40 ms | ~25 |
-| Standard CPU (FP32) | None | ~70 ms | ~14 |
-
----
-
 ## Reproducibility
 
 All experiments follow the official MVTec AD train/test split. Results are reported as **mean ± std** across 5 independent runs with 95% confidence intervals. Statistical significance is verified via paired t-tests (p < 0.05 against baselines).
@@ -223,11 +199,11 @@ python -m pytest tests/ -v
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{lwpceam2025,
+@article{lwpceam2026,
   title   = {Attention-Driven Explainable PatchCore for Real-Time Anomaly Detection
              on Resource-Constrained Edge Devices},
-  journal = {<Journal Name>},
-  year    = {2025}
+  journal = {Not yet published},
+  year    = {2026}
 }
 ```
 
@@ -252,9 +228,3 @@ The MVTec AD dataset is subject to its own license. Please review the terms at:
 https://www.mvtec.com/company/research/datasets/mvtec-ad
 
 ---
-
-## Acknowledgements
-
-- [MVTec AD Dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad) — Bergmann et al., CVPR 2019
-- [PatchCore](https://arxiv.org/abs/2106.08265) — Roth et al., CVPR 2022
-- [MobileNetV2](https://arxiv.org/abs/1801.04381) — Sandler et al., CVPR 2018
