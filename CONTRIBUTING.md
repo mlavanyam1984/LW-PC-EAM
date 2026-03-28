@@ -17,7 +17,6 @@ Thank you for your interest in contributing!
 ## Code Style
 - Follow PEP 8
 - Add type hints to all public functions
-- Add docstrings referencing the relevant paper equation (e.g., `[Equation 4]`)
 
 ## Dataset
 Do NOT commit any part of the MVTec AD dataset to the repository.
