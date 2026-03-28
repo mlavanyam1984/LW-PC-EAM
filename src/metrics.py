@@ -1,18 +1,5 @@
 """
 Evaluation Metrics for LW-PC-EAM
-==================================
-Implements all metrics referenced in the paper:
-
-  - AUROC (image-level and pixel-level)
-  - Precision, Recall, F1-Score
-  - Localization Fidelity (LF)
-  - Attribution Stability (AS)
-  - Clarity Index (CI)
-  - Explainability Score = mean(LF, AS, CI)
-  - Inference Speed (FPS) and Latency (ms)
-  - Reconstruction Error
-  - Similarity Score (cosine)
-  - Operational Cost (Eq. 13)
 """
 
 import time
