@@ -1,15 +1,6 @@
 """
 LW-PC-EAM: Lightweight PatchCore with Explainable Attention Mechanism
 =======================================================================
-Paper: "Attention-Driven Explainable PatchCore for Real-Time Anomaly Detection
-        on Resource-Constrained Edge Devices"
-
-Architecture:
-  - MobileNetV2 backbone (pretrained on ImageNet, 224x224 RGB input)
-  - Patch-level feature extraction → 512-dim embeddings
-  - PatchCore memory bank with coreset sampling (greedy minimax, 10% retention)
-  - Memory-conditioned attention module (4 heads, 128-dim Q/K projections)
-  - Explainable localization maps (logistic squashing, no post-hoc gradients)
 """
 
 import torch
