@@ -3,13 +3,10 @@ message: "If you use this software, please cite it as below."
 type: software
 title: "LW-PC-EAM: Attention-Driven Explainable PatchCore for Real-Time Anomaly Detection on Resource-Constrained Edge Devices"
 abstract: >
-  LW-PC-EAM is a lightweight, edge-deployable industrial anomaly detection
-  framework combining a MobileNetV2 backbone, PatchCore memory bank with
-  greedy minimax coreset sampling, and a novel memory-conditioned attention
-  mechanism that produces interpretable heatmaps in a single forward pass
+  LW-PC-EAM is a lightweight, edge-deployable industrial anomaly detection framework combining a MobileNetV2 backbone, PatchCore memory bank with greedy minimax coreset sampling, and a novel memory-conditioned attention mechanism that produces interpretable heatmaps in a single forward pass
   without post-hoc gradient computation.
 version: "1.0.0"
-date-released: "2025-01-01"
+date-released: "2026-03-28"
 license: MIT
 repository-code: "https://github.com/<your-username>/LW-PC-EAM"
 keywords:
